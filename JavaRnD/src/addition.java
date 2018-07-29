@@ -18,11 +18,7 @@ public class addition
     	 System.out.println();//new line  
     	 } 
     	 
-    	 String str="Am I Vikas";
-    	 StringBuffer str1=new StringBuffer(str);
-    	 str1.replace(0, 2, "He");
-    	 
-    	 System.out.println(str1);
+    	
     	 
        }
      }
