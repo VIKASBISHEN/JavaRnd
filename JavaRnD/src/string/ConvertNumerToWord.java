@@ -167,17 +167,23 @@ public class ConvertNumerToWord
 				str=str+"Hundred";
 				n=n%100;
 			}
-			else if(n>=1000 && n<10000)
+			else if(n>=1000 && n<100000)
 			{
 				str=str+one_to_hundred(n/1000);
 				str=str+"Thousand";
 				n=n%1000;
 			}
-			else if(n>=10000 && n<100000)
+			else if(n>=100000 && n<10000000)
 			{
-				str=str+one_to_hundred(n/1000);
-				str=str+"Thousand";
-				n=n%10000;
+				str=str+one_to_hundred(n/100000);
+				str=str+"Lacs";
+				n=n%100000;
+			}
+			else if(n>=10000000 && n<1000000000)
+			{
+				str=str+one_to_hundred(n/10000000);
+				str=str+"Crore";
+				n=n%10000000;
 			}
 		}
 		return str;
